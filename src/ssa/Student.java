@@ -62,13 +62,16 @@ public class Student {
 //		classMap.put("008888", new Student("008888", "Evan", "Tizard", "Brown", 12) );
 	}
 	
-	System.out.println("Input a Student ID to search ");
-	Scanner in= new Scanner(System.in);
-	String idToBeChecked = in.nextLine();
-	in.close();
+	String idToBeChecked;
+	
+//	System.out.println("Input a Student ID to search ");
+//	Scanner in= new Scanner(System.in);
+//	String idToBeChecked = in.nextLine();
+//	in.close();
 	
 	System.out.println("******Prints Student Record by HashMap key*******");
 	
+	idToBeChecked="001122";
 	System.out.printf("%-8s %-11s %-10s %-10s %-10d", classMap.get(idToBeChecked).id, classMap.get(idToBeChecked).firstName, classMap.get(idToBeChecked).lastName, classMap.get(idToBeChecked).eyeColor ,classMap.get(idToBeChecked).monthsEmployed);
 	System.out.println(" is the record you searched for");
 
@@ -92,12 +95,14 @@ public class Student {
 				System.out.println(" is the record you searched for");
 				System.out.printf("%-8s %-11s %-10s %-10s %-10d", classMap.get(sortedKeys.get(i+1)).id, classMap.get(sortedKeys.get(i+1)).firstName, classMap.get(sortedKeys.get(i+1)).lastName, classMap.get(sortedKeys.get(i+1)).eyeColor ,classMap.get(sortedKeys.get(i+1)).monthsEmployed);
 				System.out.println(" is the next highest record");
+				System.out.println("And there is no lower record");
 				}
 			if (i == (classMap.size() - 1)) {
 				System.out.printf("%-8s %-11s %-10s %-10s %-10d", classMap.get(sortedKeys.get(i)).id, classMap.get(sortedKeys.get(i)).firstName, classMap.get(sortedKeys.get(i)).lastName, classMap.get(sortedKeys.get(i)).eyeColor ,classMap.get(sortedKeys.get(i)).monthsEmployed);
 				System.out.println(" is the record you searched for");
 				System.out.printf("%-8s %-11s %-10s %-10s %-10d", classMap.get(sortedKeys.get(i-1)).id, classMap.get(sortedKeys.get(i-1)).firstName, classMap.get(sortedKeys.get(i-1)).lastName, classMap.get(sortedKeys.get(i-1)).eyeColor ,classMap.get(sortedKeys.get(i-1)).monthsEmployed);
 				System.out.println(" is the next lowest record");
+				System.out.println("And there is no higher record");
 			}	
 		}
 	}
